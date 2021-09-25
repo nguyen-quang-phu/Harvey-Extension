@@ -1,0 +1,109 @@
+{
+  // Editor
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // set default formatter
+  "editor.fontSize": 18,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace,\"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": false,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false, // cho phép quick suggestion trong snippet
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "solid",
+  "editor.lightbulb.enabled": true,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.letterSpacing": 0.5,
+  "editor.suggest.preview": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.tabSize": 2,
+
+  // Auto save
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+
+  // Explorer
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
+
+  // Zen mode
+  "zenMode.hideLineNumbers": false,
+  // window
+  "window.zoomLevel": -1,
+
+  // Workbench
+  // Theme
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#303030"
+  },
+  // "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 4,
+  // highlight matching tag
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "full": {
+        "highlight": "#303030"
+      }
+    },
+    "closing": {
+      "full": {
+        "highlight": "#303030"
+      }
+    }
+  },
+
+  // javascript and typescript
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  // Html
+  "html.autoClosingTags": false,
+
+  // Vim
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.replaceWithRegister": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.changeWordIncludesWhitespace": true,
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.highlightedyank.enable": true,
+  "vim.foldfix": true,
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-b>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-d>": false,
+    "<C-y>": false
+  },
+  // turbo Console Log
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "turboConsoleLog.quote": "'",
+
+  // Prettier
+  "prettier.requireConfig": true, // bắt buộc phải có file prettierrc
+
+  // Stylelint
+
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+
+  // Eslint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "cSpell.words": ["browserslist", "commitlint", "formik", "languagedetector", "reduxjs", "stylelint"]
+}

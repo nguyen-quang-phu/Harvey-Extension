@@ -1,0 +1,339 @@
+{
+  "Declare Assign ": {
+    "prefix": "da",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1|const,let|} ${2:variableName} = $3"],
+    "description": "Declare Assign "
+  },
+  "Export Declare Assign ": {
+    "prefix": "eda",
+    "scope": "typescript,typescriptreact",
+    "body": ["export ${1|const,let|} ${2:variableName} = $3"],
+    "description": "Export Declare Assign "
+  },
+  "Declare Assign Const ": {
+    "prefix": "dac",
+    "scope": "typescript,typescriptreact",
+    "body": ["const ${1/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/upcase}${2:+_}${2:/upcase}/g} = $2;"],
+    "description": "Declare Assign Const"
+  },
+  "Object Destructuring": {
+    "prefix": "odes",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1|const,let|} {$3} = $2"],
+    "description": "Object Destructuring"
+  },
+  "Array Destructuring": {
+    "prefix": "ades",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1|const,let|} [$3] = $2"],
+    "description": "Array Destructuring"
+  },
+  // Operator
+  "Equal": {
+    "prefix": "eq",
+    "scope": "typescript,typescriptreact",
+    "body": ["=== "],
+    "description": "Equal"
+  },
+  "Not Equal": {
+    "prefix": "neq",
+    "scope": "typescript,typescriptreact",
+    "body": ["!== "],
+    "description": "Not Equal"
+  },
+  "Great Than": {
+    "prefix": "gt",
+    "scope": "typescript,typescriptreact",
+    "body": ["> "],
+    "description": "Great Than"
+  },
+  "Great Than Equal": {
+    "prefix": "gte",
+    "scope": "typescript,typescriptreact",
+    "body": [">= "],
+    "description": "Great Than Equal"
+  },
+  "Less Than": {
+    "prefix": "lt",
+    "scope": "typescript,typescriptreact",
+    "body": ["< "],
+    "description": "Less Than"
+  },
+  "Less Than Equal": {
+    "prefix": "lte",
+    "scope": "typescript,typescriptreact",
+    "body": ["<= "],
+    "description": "Less Than Equal"
+  },
+  "Assignment": {
+    "prefix": "as",
+    "scope": "typescript,typescriptreact",
+    "body": ["= "],
+    "description": "Assignment"
+  },
+  "Addition": {
+    "prefix": "add",
+    "scope": "typescript,typescriptreact",
+    "body": ["+ "],
+    "description": "Addition"
+  },
+  "Subtraction": {
+    "prefix": "sub",
+    "scope": "typescript,typescriptreact",
+    "body": ["- "],
+    "description": "Subtraction"
+  },
+  "Multiplication": {
+    "prefix": "mul",
+    "scope": "typescript,typescriptreact",
+    "body": ["* "],
+    "description": "Multiplication"
+  },
+  "Division": {
+    "prefix": "sub",
+    "scope": "typescript,typescriptreact",
+    "body": ["/ "],
+    "description": "Division"
+  },
+  "Mod": {
+    "prefix": "mod",
+    "scope": "typescript,typescriptreact",
+    "body": ["% "],
+    "description": "Mod"
+  },
+  "Exponentiation": {
+    "prefix": "exp",
+    "scope": "typescript,typescriptreact",
+    "body": ["** "],
+    "description": "Exponentiation"
+  },
+  "Increment": {
+    "prefix": "inc",
+    "scope": "typescript,typescriptreact",
+    "body": ["++ "],
+    "description": "Increment"
+  },
+  "Decrement": {
+    "prefix": "dec",
+    "scope": "typescript,typescriptreact",
+    "body": ["-- "],
+    "description": "Decrement"
+  },
+  "AND": {
+    "prefix": "and",
+    "scope": "typescript,typescriptreact",
+    "body": ["& "],
+    "description": "AND"
+  },
+  "OR": {
+    "prefix": "or",
+    "scope": "typescript,typescriptreact",
+    "body": ["| "],
+    "description": "OR"
+  },
+  "XOR": {
+    "prefix": "xor",
+    "scope": "typescript,typescriptreact",
+    "body": ["^ "],
+    "description": "XOR"
+  },
+  "NOT": {
+    "prefix": "not",
+    "scope": "typescript,typescriptreact",
+    "body": ["~ "],
+    "description": "NOT"
+  },
+  "Left Shift": {
+    "prefix": "ls",
+    "scope": "typescript,typescriptreact",
+    "body": ["<< "],
+    "description": "Left Shift"
+  },
+  "Right Shift": {
+    "prefix": "rs",
+    "scope": "typescript,typescriptreact",
+    "body": [">> "],
+    "description": "Right Shift"
+  },
+  "Ternary": {
+    "prefix": "ter",
+    "scope": "typescript,typescriptreact",
+    "body": ["(${1:condition} ) ? ${2:trueValue} :${3:falseValue} "],
+    "description": "Ternary"
+  },
+  // Condition
+  "If Statement": {
+    "prefix": "if",
+    "scope": "typescript,typescriptreact",
+    "body": ["if ( ${1:condition} ) {", "\t$2", "}"],
+    "description": "If Statement"
+  },
+  "If Else Statement": {
+    "prefix": "ife",
+    "scope": "typescript,typescriptreact",
+    "body": ["if ( ${1:condition} ) {", "\t$2", "} else {", "\t$3", "}"],
+    "description": "If Else Statement"
+  },
+  // Logical Operator
+  "Logical AND": {
+    "prefix": "land",
+    "scope": "typescript,typescriptreact",
+    "body": ["&& "],
+    "description": "Logical AND"
+  },
+  "Logical OR": {
+    "prefix": "lor",
+    "scope": "typescript,typescriptreact",
+    "body": ["|| "],
+    "description": "Logical OR"
+  },
+  "Logical NOT": {
+    "prefix": "lnot",
+    "scope": "typescript,typescriptreact",
+    "body": ["! "],
+    "description": "Logical NOT"
+  },
+  "Logical Nullish Coalescing": {
+    "prefix": "lnull",
+    "scope": "typescript,typescriptreact",
+    "body": ["?? "],
+    "description": "Logical Nullish Coalescing"
+  },
+  // Loop
+  "While Statement": {
+    "prefix": "while",
+    "scope": "typescript,typescriptreact",
+    "body": ["while ( ${1:condition}) {", "\t$2", "}"],
+    "description": "While Statement"
+  },
+  "Do While Statement": {
+    "prefix": "dowhile",
+    "scope": "typescript,typescriptreact",
+    "body": ["do {", "\t$2", "} while ( ${1:condition} );"],
+    "description": "Do While Statement"
+  },
+  "For Statement": {
+    "prefix": "for",
+    "scope": "typescript,typescriptreact",
+    "body": ["for (let ${1:i} = ${2:0}; $1 < ${3:n}; $1++) {", "\t$4", "}"],
+    "description": "For Statement"
+  },
+  "For Reverse Statement": {
+    "prefix": "forr",
+    "scope": "typescript,typescriptreact",
+    "body": ["for (let ${1:i} = ${2:n-1}; $1 >= ${3:0}; $1--) {", "\t$4", "}"],
+    "description": "For Reverse Statement"
+  },
+  "For In Statement": {
+    "prefix": "forin",
+    "scope": "typescript,typescriptreact",
+    "body": ["for (const ${1:key} in ${2:Object}) {", "\t$3", "}"],
+    "description": "For In Statement"
+  },
+  "For Of Statement": {
+    "prefix": "forof",
+    "scope": "typescript,typescriptreact",
+    "body": ["for (const ${1:element} of ${2:Array}) {", "\t$3", "}"],
+    "description": "For of Statement"
+  },
+  "For Entries": {
+    "prefix": "foren",
+    "scope": "typescript,typescriptreact",
+    "body": ["for (const [${1:key}, ${2:value}] of Object.entries(${3:obj})) {", "\t$4", "}"],
+    "description": "For of Statement"
+  },
+  // Switch
+  "Switch Statement": {
+    "prefix": "switch",
+    "scope": "typescript,typescriptreact",
+    "body": ["switch( ${1:condition} ) {", "\tcase ${2:value} :", "\t\t$3", "\t\tbreak;", "\tdefault:", "\t\t$4", "}"],
+    "description": "Switch Statement"
+  },
+  // Function
+  "Anonymous Arrow Function": {
+    "prefix": "aaf",
+    "scope": "typescript,typescriptreact",
+    "body": ["(${1:parameters}) => {", "\t$2", "}"],
+    "description": "Anonymous Arrow Function"
+  },
+  "Async Anonymous Arrow Function": {
+    "prefix": "aaaf",
+    "scope": "typescript,typescriptreact",
+    "body": ["async (${1:parameters}) => {", "\t$2", "}"],
+    "description": "Async Anonymous Arrow Function"
+  },
+  "Map": {
+    "prefix": "map",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.map((${2:item}) => {", "\t$3", "})"],
+    "description": "Map"
+  },
+  "Find": {
+    "prefix": "find",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.find((${2:item}) => {", "\t$3", "})"],
+    "description": "Find"
+  },
+  "Filter": {
+    "prefix": "filter",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.filter((${2:item}) => {", "\t$3", "})"],
+    "description": "Filter"
+  },
+  "Sort": {
+    "prefix": "sort",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.sort((a, b) => a - b)"],
+    "description": "Sort"
+  },
+  "For Each": {
+    "prefix": "foreach",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.forEach((${2:item}) => {", "\t$3", "})"],
+    "description": "forEach"
+  },
+  "Includes": {
+    "prefix": "includes",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.includes(${2:value})"],
+    "description": "Includes"
+  },
+  "Some": {
+    "prefix": "some",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.some((${2:item}) => {", "\t$3", "})"],
+    "description": "Some"
+  },
+  "Every": {
+    "prefix": "every",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.every((${2:item}) => {", "\t$3", "})"],
+    "description": "Every"
+  },
+  "Slice": {
+    "prefix": "slice",
+    "scope": "typescript,typescriptreact",
+    "body": ["${1:arr}.slice(${2:start},${3:end})"],
+    "description": "Slice"
+  },
+  "Console log": {
+    "prefix": "clg",
+    "scope": "typescript,typescriptreact",
+    "body": ["console.log($1)"],
+    "description": "Console log"
+  },
+  "Set Timeout": {
+    "prefix": "settimeout",
+    "scope": "typescript,typescriptreact",
+    "body": ["setTimeout(() => {", "\t$2", "}, ${1:timeout});"],
+    "description": "Set Timeout"
+  },
+  // try catch
+  "Try Catch": {
+    "prefix": "tryc",
+    "scope": "typescript,typescriptreact",
+    "body": ["try {", "\t$1", "} catch (error) {", "\tconsole.log(error);", "}"],
+    "description": "Console log"
+  }
+}

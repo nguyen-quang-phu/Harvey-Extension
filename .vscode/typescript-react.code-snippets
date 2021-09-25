@@ -1,0 +1,116 @@
+{
+  //HTML
+  "Button": {
+    "prefix": "button",
+    "scope": "typescriptreact",
+    "body": ["<button type=\"button\">$1</button>"],
+    "description": "Button HTML"
+  },
+  "Div With Classes": {
+    "prefix": "dwc",
+    "scope": "typescriptreact",
+    "body": ["<div className={classes.$1}>$2</div>"],
+    "description": "Div with classes"
+  },
+  "Create Full Tag": {
+    "prefix": "cft",
+    "scope": "typescriptreact",
+    "body": ["<$1>$2</$1>"],
+    "description": "Create Full Tag"
+  },
+  "Create Self Tag": {
+    "prefix": "cst",
+    "scope": "typescriptreact",
+    "body": ["<$1 />"],
+    "description": "Create Self Tag"
+  },
+  //CSS color
+  "CSS grey": {
+    "scope": "typescriptreact",
+    "prefix": "grey",
+    "body": ["#808080"],
+    "description": "CSS grey"
+  },
+  // React
+
+  //hook
+  "Use State": {
+    "prefix": ["us", "useState"],
+    "scope": "typescriptreact",
+    "body": ["const [${1:value}, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);"],
+    "description": "Use State"
+  },
+  "Use Translation": {
+    "prefix": ["ut", "useTranslation"],
+    "scope": "typescriptreact",
+    "body": ["const [t] = useTranslation();"],
+    "description": "Use Translation"
+  },
+  "Use Effect": {
+    "prefix": ["ue", "useEffect"],
+    "scope": "typescriptreact",
+    "body": ["useEffect(() => {", "\t$1", "},[$2])"],
+    "description": "Use Translation"
+  },
+  "Use Callback": {
+    "prefix": ["ucb", "useCallback"],
+    "scope": "typescriptreact",
+    "body": ["const $1 = useCallback(() => {", "\t$2", "}, [$3]);"],
+    "description": "Use Translation"
+  },
+  "React Lazy": {
+    "prefix": ["rlz", "reactLazy"],
+    "scope": "typescriptreact",
+    "body": ["const $1 = React.lazy(() => import('$2'));"],
+    "description": "Use Translation"
+  },
+
+
+  // import and export
+  "Import Interfaces": {
+    "prefix": ["impi", "ImportInterface"],
+    "scope": "typescriptreact",
+    "body": ["import { $1 } from './interfaces';"],
+    "description": "Import Interfaces"
+  },
+  "Export Interfaces": {
+    "prefix": ["expi", "ExportInterface"],
+    "scope": "typescriptreact",
+    "body": ["export * from './interfaces';"],
+    "description": "Export Interfaces"
+  },
+  // Utils
+  "Comment Structure Component": {
+    "prefix": ["csc", "CommentStructureComponent"],
+    "scope": "typescriptreact",
+    "body": ["// Hook states", "", "// Hook effects", "", "// Constants", "", "// Action handlers", "", "// Renderers"],
+    "description": "Comment Structure Component"
+  },
+  "Get Query": {
+    "prefix": ["gq", "getQuery"],
+    "scope": "typescriptreact",
+    "body": ["const location = useLocation();", "const queries = queryString.parse(location.search);"],
+    "description": "Get Query"
+  },
+  // refactor
+  "Wrap Use Callback": {
+    "prefix": ["wrapUseCallBack"],
+    "scope": "typescriptreact",
+    "body": ["${TM_SELECTED_TEXT/(^[a-z A-Z]+=)( )([\\w\\W]+)(};)/$1 useCallback($3}/}, [$1]);"],
+    "description": "Wrap Use Callback"
+  },
+  "Wrap React Memo": {
+    "prefix": ["wrapReactMemo"],
+    "scope": "typescriptreact",
+    "body": ["${TM_SELECTED_TEXT/(.*)/React.memo($1)/}"],
+    "description": "Wrap Use Callback"
+  },
+  "Wrap React Lazy": {
+    "prefix": ["wrapReactLazy"],
+    "scope": "typescriptreact",
+    "body": [
+      "${TM_SELECTED_TEXT/(import )([\\w]+)( from )(')([@a-zA-Z\\/]+)(')/const $2 = React.lazy(() => import('$5'))/g}"
+    ],
+    "description": "Wrap React Lazy"
+  }
+}
