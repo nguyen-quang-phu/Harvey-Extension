@@ -6,7 +6,7 @@
   "description": "",
   "repository": "https://github.com/nguyen-quang-phu/Harvey-Extension.git",
   "homepage": "https://github.com/nguyen-quang-phu/Harvey-Extension#readme",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.60.0"
   },

@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
       const document = editor.document;
       const fullText = document.getText();
       const listStyles = fullText
-        .match(/styles.([a-zA-Z]+)/g)
+        .match(/styles.([a-zA-Z0-9]+)/g)
         ?.map((nameClass) => {
           return nameClass.split('.')[1];
         });

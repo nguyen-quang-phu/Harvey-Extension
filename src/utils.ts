@@ -14,10 +14,12 @@ export const extractListStyles = (text: string) => {
     const temp = style.trim() + '\n\t},\n';
     const index = temp.indexOf(':');
     const key = temp.slice(0, index);
-    const value = temp.slice(index + 1).trim();
+    let value = temp.slice(index + 1).trim();
+    if (value === '{\n\t},') {
+      value = '{\n\t\t\n\t},';
+    }
     return { ...pre, [key]: value };
   }, {} as ListStyles);
-  // console.log(res);
   return res;
 };
 export const getLineEndStyleSheet = (textContainStyleSheet: string) => {
@@ -43,16 +45,16 @@ export const createStyleSheet = (
   const uniqueListStyles = Array.from(new Set(listStyles));
   const currentStyleSheet = extractStyleSheet(textContainStyleSheet);
   const oldListStyles = extractListStyles(currentStyleSheet);
-  const separator = ':{\n\t\t\n\t},\n';
+  const separator = ' :{\n\t\t\n\t},\n';
   let styleSheet = uniqueListStyles.reduce((pre, curr) => {
     const properties = oldListStyles[curr];
     if (properties) {
-      return pre + '\t' + curr + ':' + properties + '\n';
+      return pre + '\t' + curr + ': ' + properties + '\n';
     }
     return pre + '\t' + curr + separator;
   }, '');
   styleSheet = styleSheet.slice(0, styleSheet.length - 2);
-  console.log(styleSheet);
+  // console.log(styleSheet);
   return `const styles = StyleSheet.create({\n${styleSheet}\n});
 `;
 };
