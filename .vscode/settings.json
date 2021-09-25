@@ -105,5 +105,12 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "cSpell.words": ["browserslist", "commitlint", "formik", "languagedetector", "reduxjs", "stylelint"]
+  "cSpell.words": [
+    "browserslist",
+    "commitlint",
+    "formik",
+    "languagedetector",
+    "reduxjs",
+    "stylelint"
+  ]
 }

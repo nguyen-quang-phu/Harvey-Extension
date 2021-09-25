@@ -1,10 +1,12 @@
 {
   "name": "harvey",
   "author": "Harvey",
-  "publisher": "Harvey",
+  "publisher": "harvey1998",
   "displayName": "Harvey extension",
   "description": "",
-  "version": "0.0.1",
+  "repository": "https://github.com/nguyen-quang-phu/Harvey-Extension.git",
+  "homepage": "https://github.com/nguyen-quang-phu/Harvey-Extension#readme",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -19,7 +21,7 @@
     "commands": [
       {
         "command": "extension.createStyleSheet",
-        "title": "Create Style Sheet"
+        "title": "Harvey: Create Style Sheet"
       }
     ]
   },
